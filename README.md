@@ -6,11 +6,11 @@
 В файле ```routes/web.php``` представлены основные маршруты для работы системы:
 
 ```
-Route::get('/erp/main', 'ErpController@main')->name('erp.main'); // основная страница (с меню)
+Route::get('/erp/main', 'ErpController@main')->name('erp.main'); // основная страница с выводом меню
 Route::get('/erp/list', 'ErpController@list')->name('erp.list'); // страница с выводом таблицы определенной сущности
-Route::post('/erp/create', 'ErpController@create')->name('erp.create'); // метод для создания сущности (передаем названия полей и значения)
-Route::put('/erp/update', 'ErpController@update')->name('erp.update'); // метод для изменения сущности (передаем названия полей и новые значения, а также id)
-Route::delete('/erp/delete', 'ErpController@delete')->name('erp.delete'); // метод для удаления сущности (передаем id удаляемой сущности)
+Route::post('/erp/create', 'ErpController@create')->name('erp.create'); // метод для создания сущности (передаем название модели (сущности), названия полей и значения)
+Route::put('/erp/update', 'ErpController@update')->name('erp.update'); // метод для изменения сущности (передаем название модели (сущности), названия полей и новые значения, а также id)
+Route::delete('/erp/delete', 'ErpController@delete')->name('erp.delete'); // метод для удаления сущности (передаем название модели (сущности), id удаляемой сущности)
 ```
 
 Далее рассмотрим конфигурационный файл ```erp_routes.php```, в нем находятся "модули", которые описываются следующими полями:
